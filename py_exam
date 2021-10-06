@@ -1,0 +1,35 @@
+#!/Ethan/HW4/python3
+# DATA TYPE Examples
+########## DICTIONARY ##############
+import math
+client_number = input('Client application number: ')
+client_reference = input('Client referral name: ')
+client_district = input('Client regional district listing: ')
+client_cause = input('Reason for joining: ')
+client_sector = input('Client buying sector: ')
+print(client_number)
+print(client_reference)
+products = {"military-grade drones" : 3000, "ground-state robots" : 1000, "medical bees" : 200}
+for x in products:
+    print(x, products[x])
+purchase_drones = input('Number of Military-grade Drones: ')
+purchase_robots = input('Number of Ground-state Robots: ')
+purchase_bees = input('Number of Medical Bees: ')
+total_drones =  int(purchase_drones) * int(products["military-grade drones"])
+total_robots =    int(purchase_robots) * int(products["ground-state robots"])
+total_bees = int(purchase_bees) * int(products["medical bees"])
+total_charge = int(total_drones) + int(total_robots) + int(total_bees)
+print(client_number)
+print(client_reference)
+print(client_district)
+print(client_cause)
+print(client_sector)
+print(total_charge)
+mydrones = "You Bought {} number of Military-grade Drones at {} = {} dollars."
+print(mydrones.format(purchase_drones, products["military-grade drones"], total_drones))
+myrobots = "               `{} number of Ground-state Robots at {} = {} dollars."
+print(myrobots.format(purchase_robots, products["ground-state robots"], total_robots))
+mybees =   "                {} number of Medical Bees at {} = {} dollars."
+print(mybees.format(total_bees, products["medical bees"], total_bees))
+mytotal =  "                Total Amount Due = {} dollars."
+print(mytotal.format(total_charge))
